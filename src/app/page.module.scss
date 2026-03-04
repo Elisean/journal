@@ -1,0 +1,14 @@
+.container{
+    max-width: 1270px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.inner{
+    display: flex;
+    justify-content: space-between;
+}
+.sidebar{
+    flex: 0 1 15%;
+    height: 100vh;
+    border-right: 4px solid black;
+}
