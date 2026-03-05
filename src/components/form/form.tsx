@@ -2,6 +2,8 @@
 
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Input } from "../input/input";
+import styles from "./form.module.scss"
+import { Button } from "../button/button";
 
 
 
@@ -23,15 +25,16 @@ export const Form = () => {
 
   return (
    
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
 
    
-    <Input defaultValue="test" {...register("example")}/>
-    <Input {...register("exampleRequired", { required: true })} />
+    <Input placeholder="Date" {...register("example")}/>
+    <Input placeholder="Time" {...register("exampleRequired", { required: true })} />
     
       {errors.exampleRequired && <span>This field is required</span>}
 
-      <input type="submit" />
+   
+      <Button children={'click'} type="submit"/>
     </form>
   )
 }

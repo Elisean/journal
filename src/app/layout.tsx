@@ -2,6 +2,23 @@ import type { Metadata } from "next";
 import "./globals.scss";
 
 
+import { initializeApp } from "firebase/app";
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyACEVL24wq7TLalAfmPZaLLahYKqkzkqhs",
+  authDomain: "journal-ce83d.firebaseapp.com",
+  projectId: "journal-ce83d",
+  storageBucket: "journal-ce83d.firebasestorage.app",
+  messagingSenderId: "702635433926",
+  appId: "1:702635433926:web:3619ad0e09a72a0ed41cc7"
+};
+
+
+const app = initializeApp(firebaseConfig);
+
+
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
