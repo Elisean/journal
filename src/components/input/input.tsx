@@ -1,11 +1,12 @@
 'use client'
 
-import React, { FC, forwardRef } from 'react'
+import React, { forwardRef } from 'react'
+import styles from './input.module.scss'
 
 export const Input = forwardRef<
   HTMLInputElement,
   React.InputHTMLAttributes<HTMLInputElement>
 >((props, ref) => {
-  return <input ref={ref} {...props} />;
+  return <input className={styles.input} ref={ref} {...props} />;
 });
 
